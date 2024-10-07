@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap 1</title>
+        <style>
+        
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+        #container {
+            margin-top: 20px;
+            width: 1100px;
+            height: 700px;
+            border: 1px solid #000;
+            background-image: linear-gradient(#60a4ec, #4463dd);
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            color:#fff;
+            border-bottom: 7px dotted rgb(255, 255, 255);
+        }
+        header h1 {
+            color: #fff;
+            text-shadow: 4px 4px 4px rgb(17, 39, 206);
+            position: absolute;
+            right: 120px;
+            padding-top: 10px;
+        }
+        header ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header ul li {
+            display:inline-block;
+            width:100px;
+            height: 20px;
+            text-align: left;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        header ul {
+            padding: 10px;
+            font-size: 25px;
+            margin: 0;
+        }
+
+        section{
+            width:50%;
+            height:550px;
+            float:left;
+            border-bottom: 7px dotted rgb(255, 255, 255);
+            padding: 20px;
+        }
+        section h1{
+            color: #fff;
+            position: absolute;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+        section p{
+            text-align: justify ;
+            color:#fff;
+            padding-top: 50px;
+            padding-left: 5px;
+        }
+        section table{
+            color: #fff;
+            position: absolute;
+            padding-left:20px;
+        }
+        section table input, select, textarea {
+            width: 100%;
+            height:30px;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #4463dd;
+       }
+       section button{
+            width:50px;
+            height: 20px;
+            border: 2px dashed #232222;
+       }
+        section table textarea {
+            height: 120px;
+            width:200px;
+            border-radius: 5px;
+        }
+        aside{
+            width:50%;
+            height:550px;
+            float:left;
+            border-bottom: 7px dotted rgb(255, 255, 255);
+            padding: 20px;
+        }
+        aside #sk{
+            width:95%;
+            height:350px;
+            padding: 10px;   
+            margin: 5px;    
+            }
+        aside h2{
+            padding-left: 50px;
+            font-size: 40px;
+            font-weight: bold; 
+            color: #0000ff; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 139, 0.7);
+        }
+        aside p{
+            padding-left: 70px;
+            font-size: 20px;
+            font-weight: bold; 
+            color: #0000ff; 
+
+        }
+        footer {
+            clear:both;
+            width:100%;
+            height:78px;
+            text-align: center;
+        }
+        footer p{
+        padding-top: 20px;
+        color:#ffffff;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header> 
+            <h1>Sky World</h1>
+
+        <ul id="c1">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+       <section> 
+            <h1>Registration Information</h1>
+            <p>Start your travel planning now with our on-line tour regstration
+                form. Just tell us a little about yourself and your group and one of our travel
+                experts will contact  you  to create the perfect custom built for your group's needs .</p>
+                <table>
+                    <tr>
+                        <td>Title</td>
+                        <td><select id="title" name="title">
+                            <option>Mr.</option>
+                            <option>Ms.</option>
+                            <option>Mrs.</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Full Name*</td>
+                        <td><input type="text" id="fullname" name="fullname" placeholder="First Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mailing Address</td>
+                        <td><input type="text" id="mailing" name="mailing" placeholder="Mailing Address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" id="city" name="city" placeholder="City">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><input type="text" id="country" name="country" placeholder="Country"></td>
+                    </tr>
+                    <tr>
+                        <td>Specific questions or requests about your tour</td>
+                        <td><textarea id="questions" name="questions"  placeholder="Specific questions or requests about your tour"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit">submit</button>
+                            <button type="reset">reset</button></td>
+                    </tr>
+                </table>
+        </section>
+        <aside>
+            <img src="sky.png" alt="sky" id="sk">
+            <br>
+            <h2 class="styled-text">You've arrived.</h2>
+            <p>Journeys as great as the destinations.</p>
+        </aside>
+        <footer>
+            <p> <b> &copy; 2016 Sky World Tours. All rights reserved.<br>Contact information: <i>Student Name | StudentID |</i>  Testing Date: <i>16 Sept 2016</p></b> 
+
+        </footer>
+
+    </div>
+</body>
+</html>
