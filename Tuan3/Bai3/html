@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autumn Travel Company</title>
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="../Bai3/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Autumn Travel Company</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Order</a></li>
-                </ul>
-            </nav>
-        </header>
-
+    <div class="wrapper">
+        <Header>
+            <h1>AUTUMN TRAVEL COMPANY</h1>
+        </Header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Order</a></li>
+            </ul>
+        </nav>
         <div class="content">
             <img src="line.png" alt="">
             <form id="form1">
