@@ -9,9 +9,19 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <style>
+        .mauDo {
+            font-size: 100%;
+            color: red;
+        }
+        
+        .mauXanh {
+            font-size: 100%;
+            color: green;
+        }
+        
         [class*="col-"] {
-            padding-left: 0px;
-            padding-right: 0px;
+            padding-right: 0;
+            padding-left: 0;
         }
         
         li {
@@ -25,16 +35,6 @@
         #checkbox {
             width: 15px;
             height: 15px;
-        }
-        
-        .mauDo {
-            font-size: 100%;
-            color: red;
-        }
-        
-        .mauXanh {
-            font-size: 100%;
-            color: green;
         }
     </style>
     <script>
@@ -75,7 +75,7 @@
                     $("#tbTen").removeClass("mauXanh");
                     return false;
                 } else if (regex.test(hoten) == false) {
-                    $("#tbTen").html("Họ tên tối thiểu 2 từ và viết hoa chữ cái đầu");
+                    $("#tbTen").html("Họ tên tối thiểu 2 từ, viết hoa chữ cái đầu, theo mẫu: Nguyen Van Anh");
                     $("#tbTen").addClass("mauDo");
                     $("#tbTen").removeClass("mauXanh");
                     return false;
@@ -160,7 +160,7 @@
 </head>
 
 <body>
-    <div class="container-border">
+    <div class="container border">
         <div class="row">
             <div class="col-12">
                 <img src="../img/header.png" alt="" width="100%">
@@ -176,7 +176,7 @@
             </div>
         </div>
         <div class="row">
-            <table class="table-bordered table-hover table">
+            <table class="table-bordered  table-hover table" id="tbDanhSach">
                 <tr>
                     <th>STT</th>
                     <th>Mã học viên</th>
@@ -198,7 +198,7 @@
             </table>
         </div>
         <div class="row">
-            <div class="modal fade" id="myModal">
+            <div class="modal fade " id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -209,7 +209,7 @@
                             <form action="" class="form-control" id="form1">
                                 <div class="row form-group p-1">
                                     <div class="col-3 col-sm-3">
-                                        <label for="">Mã học sinh</label>
+                                        <label for="">Mã học viên:</label>
                                     </div>
                                     <div class="col-6 col-sm-6">
                                         <input type="text" class="form-control" id="txtMa" placeholder="123456789">
@@ -219,11 +219,12 @@
                                     </div>
                                 </div>
                                 <div class="row form-group p-1">
+
                                     <div class="col-3 col-sm-3">
-                                        <label for="">Họ tên</label>
+                                        <label for="">Họ tên:</label>
                                     </div>
                                     <div class="col-6 col-sm-6">
-                                        <input type="text" class="form-control" id="txtTen" placeholder="Ha Thi Thuy Van">
+                                        <input type="text" class="form-control" id="txtHT" placeholder="Ha Thi Thuy Van">
                                     </div>
                                     <div class="col-3 col-sm-3 p-2">
                                         <span id="tbTen">*</span>
@@ -231,8 +232,9 @@
                                 </div>
                                 <div class="row form-group p-1">
                                     <div class="col-3 col-sm-3">
-                                        <label for="">Email</label>
+                                        <label for="">Email:</label>
                                     </div>
+
                                     <div class="col-6 col-sm-6">
                                         <input type="text" class="form-control" id="txtDC" placeholder="thuyvan@iuh.edu.vn">
                                     </div>
@@ -242,38 +244,30 @@
                                 </div>
                                 <div class="row form-group p-1">
                                     <div class="col-4 col-sm-3">
-                                        <label for="">Dịch vụ</label>
+                                        <label for="">Dịch vụ:</label>
                                     </div>
                                     <div class="col-6 col-sm-6">
                                         <select name="gia" id="slGia" class="form-control">
-                                            <option value="20000">Bơi</option>
-                                            <option value="30000">Trượt ván</option>
-                                            <option value="40000">Moto nước</option>
+                                            <option value="2000">Bơi</option>
+                                            <option value="3000">Trượt ván</option>
+                                            <option value="5000">Moto nước</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row form-group p-1">
                                     <div class="col-4 col-sm-3">
-                                        <label for="">Giá tiền</label>
+                                        <label for="">Giá tiền:</label>
                                     </div>
                                     <div class="col-8 col-sm-6">
-                                        <input type="text" name="txtDV" id="txtDV" class="form-control" disabled value="20000">
+                                        <input type="text" name="txtDV" id="txtDV" class="form-control" disabled>
                                     </div>
                                 </div>
                                 <div class="row p-1">
                                     <div class="col-4 col-sm-3">
-                                        <label for="">Đồ dùng</label>
+                                        <label for="">Đồ dùng:</label>
                                     </div>
                                     <div class="col-8 col-sm-6">
-                                        <input type="checkbox" name="chkDoDung" id="checkbox" class="chkDoDung" disabled value="20000"> Áo quần bơi
-                                    </div>
-                                </div>
-                                <div class="row p-1">
-                                    <div class="col-4 col-sm-3">
-                                        <label for=""></label>
-                                    </div>
-                                    <div class="col-8 col-sm-6">
-                                        <input type="checkbox" name="chkDoDung" id="checkbox" class="chkDoDung" disabled value="50000"> Phao
+                                        <input type="checkbox" name="chkDoDung" class="chkDoDung" value="20000" id="checkbox"> Áo quần bơi
                                     </div>
                                 </div>
                                 <div class="row p-1">
@@ -281,32 +275,42 @@
                                         <label for=""></label>
                                     </div>
                                     <div class="col-8 col-sm-6">
-                                        <input type="checkbox" name="chkDoDung" id="checkbox" class="chkDoDung" disabled value="70000"> Kính bơi
+                                        <input type="checkbox" name="chkDoDung" class="chkDoDung" value="50000" id="checkbox"> Phao
                                     </div>
                                 </div>
                                 <div class="row p-1">
                                     <div class="col-4 col-sm-3">
-                                        <label for="">Tiền đồ dùng</label>
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="checkbox" name="chkDoDung" class="chkDoDung" value="70000" id="checkbox"> Kính bơi
+                                    </div>
+                                </div>
+                                <div class="row p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Tiền đồ dùng:</label>
                                     </div>
                                     <div class="col-8 col-sm-6">
                                         <input type="text" name="txtDD" id="txtDD" class="form-control" disabled>
                                     </div>
                                 </div>
+                                <br>
                                 <div class="row p-1">
                                     <div class="col-4 col-sm-3">
-                                        <label for="">Tổng tiền</label>
+                                        <label for="">Tổng tiền:</label>
                                     </div>
                                     <div class="col-8 col-sm-6">
                                         <input type="text" name="txtTong" id="txtTong" class="form-control" disabled>
                                     </div>
                                 </div>
+                                <br>
                                 <div class="row p-1">
                                     <div class="col-sm-6"><input type="button" value="Thanh toán" id="btnSave" class="btn btn-success btn-block"></div>
                                     <div class="col-sm-6"><input type="reset" value="Hủy" class="btn btn-danger btn-block"></div>
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer ">
+                        <div class="modal-footer">
                             <h4>Trang thanh toán</h4>
                         </div>
                     </div>
